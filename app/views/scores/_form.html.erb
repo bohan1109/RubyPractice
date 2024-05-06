@@ -27,8 +27,8 @@
   </div>
 
   <div>
-    <%= form.label :student_id, style: "display: block" %>
-    <%= form.text_field :student_id %>
+  <%= form.label :student_id, "Student ID", style: "display: block" %>
+  <%= form.collection_select :student_id, @students, :id, :id, { include_blank: 'Please Select' }, { style: "display: block" } %>
   </div>
 
   <div>

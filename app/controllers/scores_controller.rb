@@ -13,10 +13,13 @@ class ScoresController < ApplicationController
   # GET /scores/new
   def new
     @score = Score.new
+    @students = Student.all
   end
 
   # GET /scores/1/edit
   def edit
+    @score = Score.find(params[:id])
+    @students = Student.all
   end
 
   # POST /scores or /scores.json
